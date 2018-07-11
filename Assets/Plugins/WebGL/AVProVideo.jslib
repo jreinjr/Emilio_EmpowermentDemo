@@ -41,6 +41,13 @@ var AVProVideoWebGL = {
 
         var vid = document.createElement("video");
 
+        // NOTE: Uncomment these lines below to add dash.js support for MPEG-DASH
+        //       You need to copy dash.all.min.js and copy it into /Plugins/WebGL/ folder
+        //       You need to rename it to dash.all.min.jspre
+        //       The player will ONLY open MPEG-DASH streams after this change
+        // var player = dashjs.MediaPlayer().create();
+        // player.initialize(vid, path, true);
+
 		// Some sources say that this is the proper way to catch errors...
 		/*vid.addEventListener('error', function(event) {
 			console.log("Error: " + event);

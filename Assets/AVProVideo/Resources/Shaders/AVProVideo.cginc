@@ -46,9 +46,12 @@ INLINE bool IsStereoEyeLeft(FLOAT3 worldNosePosition, FLOAT3 worldCameraRight)
 	return true;
 #elif defined(FORCEEYE_RIGHT)
 	return false;
-#elif defined(UNITY_SINGLE_PASS_STEREO)
+#elif defined(UNITY_SINGLE_PASS_STEREO) || defined (UNITY_STEREO_INSTANCING_ENABLED)
 	// Unity 5.4 has this new variable
 	return (unity_StereoEyeIndex == 0);
+#elif defined (UNITY_DECLARE_MULTIVIEW)
+	// OVR_multiview extension
+	return (UNITY_VIEWID == 0);
 #else
 
 //#if (UNITY_VERSION > 540) && defined(GOOGLEVR) && !defined(SHADERLAB_GLSL)
@@ -133,6 +136,9 @@ INLINE FLOAT4 GetStereoDebugTint(bool isLeftEye)
 #if defined(UNITY_UV_STARTS_AT_TOP)
 	tint.b = 0.5;
 #endif
+/*#if defined(UNITY_SINGLE_PASS_STEREO) || defined(UNITY_STEREO_INSTANCING_ENABLED) || defined(UNITY_DECLARE_MULTIVIEW)
+	tint.b = 1.0;
+#endif*/
 
 	return tint;
 }
