@@ -32,7 +32,7 @@ public class VCR : MonoBehaviour {
     {
         switch (eventType)
         {
-            case MediaPlayerEvent.EventType.FirstFrameReady:
+            case MediaPlayerEvent.EventType.ReadyToPlay:
                 Play();
                 break;
         }
