@@ -5,34 +5,30 @@ using UnityEngine.Events;
 using RenderHeads.Media.AVProVideo;
 using UnityEngine.Timeline;
 using UnityEngine.Playables;
-using TBE;
 using System;
 
 public class VCR : MonoBehaviour {
 
     public MediaPlayer m_mediaPlayer;
     public PlayableDirector m_playableDirector;
-    public SpatDecoderFile m_spatDecoderFile;
  
-    public void PlayVideoFile(VideoFile videoFile, PlayableAsset timeline = null, string tbePath = "")
+    public void PlayVideoFile(VideoFile videoFile, PlayableAsset timeline = null)
     {
+        Debug.Log("PlayVideoFile called");
         if (timeline != null)
             m_playableDirector.playableAsset = timeline;
 
-        if (tbePath != "")
-            m_spatDecoderFile.open(tbePath);
-
-        Debug.Log(videoFile.m_path);
-
         m_mediaPlayer.OpenVideoFromFile(videoFile.m_fileLocation, videoFile.m_path, autoPlay: false);
+        Debug.Log(videoFile.m_path);
         m_mediaPlayer.Events.AddListener(VideoEventListener);
     }
 
     private void VideoEventListener(MediaPlayer mediaPlayer, MediaPlayerEvent.EventType eventType, ErrorCode errorCode)
     {
+        Debug.Log(eventType);
         switch (eventType)
         {
-            case MediaPlayerEvent.EventType.FirstFrameReady:
+            case MediaPlayerEvent.EventType.ReadyToPlay:
                 Play();
                 break;
         }
@@ -50,15 +46,16 @@ public class VCR : MonoBehaviour {
 
     public void Pause()
     {
+        Debug.Log("Pause");
         m_mediaPlayer.Pause();
         m_playableDirector.Pause();
-        m_spatDecoderFile.pause();
     }
 
     public void Play()
     {
-        m_spatDecoderFile.setExternalClockInMs(m_mediaPlayer.Control.GetCurrentTimeMs());
-        m_spatDecoderFile.play();
+        Debug.Log("Play");
+        Debug.Log(m_mediaPlayer.name);
+        Debug.Log(m_mediaPlayer.m_VideoPath);
         m_mediaPlayer.Play();
         m_playableDirector.Play();
     }

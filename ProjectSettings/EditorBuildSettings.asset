@@ -5,16 +5,16 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 1
+  - enabled: 0
     path: Assets/Menu/Menu.unity
     guid: d7e7953de4180b541a632284e837c8cb
   - enabled: 1
     path: Assets/VideoPlayer/VideoPlayer.unity
     guid: 99c9720ab356a0642a771bea13969a05
-  - enabled: 1
+  - enabled: 0
     path: Assets/Quiz/Quiz.unity
     guid: 3991426f12ce76f4c95be7cff6b5181d
-  - enabled: 1
+  - enabled: 0
     path: Assets/Wrapup/Wrapup.unity
     guid: 93208a80e3d9c4c418a001c275282612
   - enabled: 1
@@ -23,3 +23,6 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/VRTK/Examples/VRTK_SDKManager_Constructor.unity
     guid: 3fb19ae213a4a4d45bb9ecd245a8fadb
+  - enabled: 0
+    path: Assets/AVProVideo/Demos/08_Demo_360SphereVideo.unity
+    guid: 46c885062d1f974438005e5b3d285ab6
