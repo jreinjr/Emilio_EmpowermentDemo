@@ -6,14 +6,20 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/AppFlow/AppFlow.unity
-    guid: 682b4c1ae453a9848abd82bd3cd8addb
-  - enabled: 1
     path: Assets/Menu/Menu.unity
     guid: d7e7953de4180b541a632284e837c8cb
   - enabled: 1
     path: Assets/VideoPlayer/VideoPlayer.unity
     guid: 99c9720ab356a0642a771bea13969a05
   - enabled: 1
+    path: Assets/Quiz/Quiz.unity
+    guid: 3991426f12ce76f4c95be7cff6b5181d
+  - enabled: 1
+    path: Assets/Wrapup/Wrapup.unity
+    guid: 93208a80e3d9c4c418a001c275282612
+  - enabled: 1
+    path: Assets/AppFlow/AppFlow.unity
+    guid: 682b4c1ae453a9848abd82bd3cd8addb
+  - enabled: 0
     path: Assets/VRTK/Examples/VRTK_SDKManager_Constructor.unity
     guid: 3fb19ae213a4a4d45bb9ecd245a8fadb

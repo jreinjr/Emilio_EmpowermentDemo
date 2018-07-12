@@ -6,7 +6,7 @@ using UnityEngine;
 public class Question : ScriptableObject {
 
     public string text;
-    public AudioClip audio;
+    //public AudioClip audio;
     public List<Choice> choices;
 
 }

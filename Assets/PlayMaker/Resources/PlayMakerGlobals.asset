@@ -23,11 +23,23 @@ MonoBehaviour:
       networkSync: 0
       value: Menu
     - useVariable: 1
+      name: scene_Quiz
+      tooltip: 
+      showInInspector: 1
+      networkSync: 0
+      value: Quiz
+    - useVariable: 1
       name: scene_VideoPlayer
       tooltip: 
       showInInspector: 1
       networkSync: 0
       value: VideoPlayer
+    - useVariable: 1
+      name: scene_Wrapup
+      tooltip: 
+      showInInspector: 0
+      networkSync: 0
+      value: Wrapup
     vector2Variables: []
     vector3Variables: []
     colorVariables: []
@@ -41,7 +53,7 @@ MonoBehaviour:
     enumVariables: []
     categories:
     - 
-    variableCategoryIDs: 0000000000000000
+    variableCategoryIDs: 00000000000000000000000000000000
   events:
   - Emp_6A_01_Clicked
   - FINISHED

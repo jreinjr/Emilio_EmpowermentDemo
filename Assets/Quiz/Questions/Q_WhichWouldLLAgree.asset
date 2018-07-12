@@ -13,17 +13,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   text: "Which of the following statement would the \u201CListening Leader\u201D most
     agree with?"
-  audio: {fileID: 0}
   choices:
-  - text: 
+  - text: "There is no such thing as \u201Cmodern leadership\u201D - the CEO enjoys
+      trust and control and the rest has to follow. "
     correct: 0
-    audio: {fileID: 0}
-  - text: 
+    correction_text: 'Trust is earned through integrity, not through a position. It
+      has to be earned and confirmed on a continuous basis. '
+  - text: "Authority boils down to charisma. Either you have it or you don\u2019t. "
     correct: 0
-    audio: {fileID: 0}
-  - text: 
+    correction_text: "The key aspects of a \u201CListening Leader\u201D can be learnt."
+  - text: "Being authentic is the most important aspect for a \u201CListening Leader\u201D."
     correct: 0
-    audio: {fileID: 0}
-  - text: 
-    correct: 0
-    audio: {fileID: 0}
+    correction_text: While authenticity is also important, trust is the basis for
+      communicative leadership.
+  - text: Leadership needs to be learnt and mastered over time. Trust is the basis
+      for it.
+    correct: 1
+    correction_text: 

@@ -7,6 +7,7 @@ public class SphericalTransform : MonoBehaviour {
 
     public bool m_LookAtOrigin;
     public Vector3 m_origin;
+    public Vector3 m_scale = Vector3.one;
     public float m_radius;
     [Range(-90, 90)] public float m_polar = 0;
     [Range(-180, 180)] public float m_azimuthal = 0;
@@ -34,5 +35,7 @@ public class SphericalTransform : MonoBehaviour {
 
         if (m_LookAtOrigin)
             transform.rotation = Quaternion.LookRotation(transform.position - m_origin);
+
+        transform.localScale = m_scale;
 	}
 }

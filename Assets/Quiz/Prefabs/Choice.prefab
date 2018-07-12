@@ -21,6 +21,7 @@ GameObject:
   - component: {fileID: 224291866630269762}
   - component: {fileID: 222590770705681680}
   - component: {fileID: 114766169983356114}
+  - component: {fileID: 114188843080214422}
   - component: {fileID: 114498373118441126}
   - component: {fileID: 114727203458454970}
   m_Layer: 5
@@ -47,6 +48,19 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &114188843080214422
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1063829255108034}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e51503817ee713459a94cb2daaa638a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  button: {fileID: 114498373118441126}
+  label: {fileID: 114330791433342698}
 --- !u!114 &114330791433342698
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -68,11 +82,11 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 26
+    m_FontSize: 68
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 10
-    m_MaxSize: 40
+    m_MaxSize: 80
     m_Alignment: 4
     m_AlignByGeometry: 0
     m_RichText: 1
@@ -136,7 +150,7 @@ MonoBehaviour:
   m_MinWidth: -1
   m_MinHeight: -1
   m_PreferredWidth: -1
-  m_PreferredHeight: 100
+  m_PreferredHeight: 150
   m_FlexibleWidth: -1
   m_FlexibleHeight: -1
   m_LayoutPriority: 1

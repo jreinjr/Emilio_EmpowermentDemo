@@ -7,6 +7,7 @@ public class Choice {
 
     public string text;
     public bool correct;
-    public AudioClip audio;
+    //public AudioClip audio;
+    public string correction_text;
 
 }

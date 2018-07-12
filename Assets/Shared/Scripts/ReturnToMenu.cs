@@ -5,7 +5,12 @@ using UnityEngine;
 [RequireComponent(typeof(PlayMakerFSM))]
 public class ReturnToMenu : MonoBehaviour {
 
-    public PlayMakerFSM fsm;
+    PlayMakerFSM fsm;
+
+    private void Start()
+    {
+        fsm = GameObject.Find("AppFlow").GetComponent<PlayMakerFSM>();
+    }
 
     void Update () {
         if (OVRInput.GetUp(OVRInput.RawButton.Back) || OVRInput.GetUp(OVRInput.RawButton.Start))

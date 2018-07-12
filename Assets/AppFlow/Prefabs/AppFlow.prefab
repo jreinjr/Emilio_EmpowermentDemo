@@ -19,8 +19,9 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4639887289398970}
-  - component: {fileID: 114286338158853636}
   - component: {fileID: 114551650601840570}
+  - component: {fileID: 114715246156024374}
+  - component: {fileID: 114153891740582410}
   m_Layer: 0
   m_Name: AppFlow
   m_TagString: Untagged
@@ -41,7 +42,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &114286338158853636
+--- !u!114 &114153891740582410
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -49,9 +50,15 @@ MonoBehaviour:
   m_GameObject: {fileID: 1892088455257226}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b5d39bb5c78c8064ca5c0001cfb0aba1, type: 3}
+  m_Script: {fileID: 11500000, guid: 223f74074a9470b408a78cbee7535f2f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  OnStartup:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  AppFlow: {fileID: 114551650601840570}
 --- !u!114 &114551650601840570
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -126,7 +133,13 @@ MonoBehaviour:
     variables:
       floatVariables: []
       intVariables: []
-      boolVariables: []
+      boolVariables:
+      - useVariable: 1
+        name: startup
+        tooltip: 
+        showInInspector: 0
+        networkSync: 0
+        value: 1
       stringVariables:
       - useVariable: 1
         name: Video_Clicked_Event
@@ -140,6 +153,18 @@ MonoBehaviour:
       rectVariables: []
       quaternionVariables: []
       gameObjectVariables:
+      - useVariable: 1
+        name: SceneFlow
+        tooltip: 
+        showInInspector: 0
+        networkSync: 0
+        value: {fileID: 0}
+      - useVariable: 1
+        name: VCR
+        tooltip: 
+        showInInspector: 0
+        networkSync: 0
+        value: {fileID: 0}
       - useVariable: 1
         name: controller_LFT
         tooltip: 
@@ -159,7 +184,7 @@ MonoBehaviour:
       enumVariables: []
       categories:
       - 
-      variableCategoryIDs: 000000000000000000000000
+      variableCategoryIDs: 000000000000000000000000000000000000000000000000
     description: 
     docUrl: 
     showStateLabel: 0
@@ -169,7 +194,7 @@ MonoBehaviour:
     locked: 0
     manualUpdate: 0
     keepDelayedEventsOnStateExit: 0
-    preprocessed: 1
+    preprocessed: 0
     ExposedEvents: []
     RestartOnEnable: 1
     EnableDebugFlow: 0
@@ -204,3 +229,14 @@ MonoBehaviour:
     handleAnimatorIK: 0
   fsmTemplate: {fileID: 11400000, guid: 165932a4f7fca76459b2651b2a35d24e, type: 2}
   eventHandlerComponentsAdded: 1
+--- !u!114 &114715246156024374
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1892088455257226}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 15e81f5b7924e704290036c6fd0548bd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
