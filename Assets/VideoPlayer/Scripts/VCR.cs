@@ -12,12 +12,11 @@ public class VCR : MonoBehaviour {
     public MediaPlayer m_mediaPlayer;
     public PlayableDirector m_playableDirector;
  
-    public void PlayVideoFile(VideoFile videoFile, PlayableAsset timeline = null)
+    public void PlayVideoFile(VideoFile videoFile, PlayableAsset timeline)
     {
         Debug.Log("PlayVideoFile called");
         if (timeline != null)
             m_playableDirector.playableAsset = timeline;
-
         m_mediaPlayer.OpenVideoFromFile(videoFile.m_fileLocation, videoFile.m_path, autoPlay: false);
         Debug.Log(videoFile.m_path);
         m_mediaPlayer.Events.AddListener(VideoEventListener);
